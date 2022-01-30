@@ -1,3 +1,17 @@
+
+ document.addEventListener("DOMContentLoaded", () =>{
+    const loader = document.querySelector(".loader");
+    setTimeout(function() {
+        loader.style.opacity = "0";
+        setTimeout(function() {
+            loader.style.display = "none";
+        }, 500);
+    }, 2000);
+
+
+ });
+
+
 const btn =  document.querySelector(".btn");
 const title = document.querySelector("h3");
 const images = document.querySelectorAll(".image");
@@ -120,4 +134,6 @@ images[2].addEventListener("click", e =>{
     }
   
  });
+
+
 
