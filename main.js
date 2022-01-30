@@ -39,12 +39,15 @@ btn.addEventListener("click", e =>{
 images[0].addEventListener("click", e =>{
    element.src = images[0].src;
    left.appendChild(element);
- let index = random(0, images.length-1);
- elementRight.src = images[index].src;
- right.appendChild(elementRight);
 
- 
- 
+ setTimeout(put, 200);
+
+ function put(){
+    let index = random(0, images.length-1);
+    elementRight.src = images[index].src;
+    right.appendChild(elementRight);
+   
+    
     if(elementRight.src == images[0].src){
         j += 1;
         hisob[1].textContent = j;
@@ -57,49 +60,64 @@ images[0].addEventListener("click", e =>{
         i += 1;
         hisob[0].textContent = i;
     }
+ }
+ 
+ 
 });
 
 images[1].addEventListener("click", e =>{
     element.src = images[1].src;
     left.appendChild(element);
-    let index = random(0, images.length-1);
-    elementRight.src = images[index].src;
-    right.appendChild(elementRight);
-   
- 
-    if(elementRight.src == images[0].src){
-        i += 1;
-        hisob[0].textContent = i;
+
+    setTimeout(put,500);
+
+    function put(){
+        let index = random(0, images.length-1);
+        elementRight.src = images[index].src;
+        right.appendChild(elementRight);
+       
+     
+        if(elementRight.src == images[0].src){
+            i += 1;
+            hisob[0].textContent = i;
+        }
+        else if(elementRight.src == images[1].src){
+            j += 1;
+            hisob[1].textContent = j;
+        }
+        else{
+            k += 1;
+            hisob[2].textContent = k;
+        }
     }
-    else if(elementRight.src == images[1].src){
-        j += 1;
-        hisob[1].textContent = j;
-    }
-    else{
-        k += 1;
-        hisob[2].textContent = k;
-    }
+  
  });
  
 images[2].addEventListener("click", e =>{
     element.src = images[2].src;
     left.appendChild(element);
-    let index = random(0, images.length-1);
-    elementRight.src = images[index].src;
-    right.appendChild(elementRight);
-   
- 
-    if(elementRight.src == images[0].src){
-        k += 1;
-        hisob[2].textContent = k;
+     
+    setTimeout(put, 200);
+    function put(){
+        let index = random(0, images.length-1);
+        elementRight.src = images[index].src;
+        right.appendChild(elementRight);
+       
+     
+        if(elementRight.src == images[0].src){
+            k += 1;
+            hisob[2].textContent = k;
+        }
+        else if(elementRight.src == images[1].src){
+            i += 1;
+            hisob[0].textContent = i;
+        }
+        else{
+            j += 1;
+            hisob[1].textContent = j;
+        }
+
     }
-    else if(elementRight.src == images[1].src){
-        i += 1;
-        hisob[0].textContent = i;
-    }
-    else{
-        j += 1;
-        hisob[1].textContent = j;
-    }
+  
  });
 
